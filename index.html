@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tanmay Patil - Portfolio</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+</head>
+<!-- ✅ Cookie Consent Banner -->
+<div id="cookie-consent" class="fixed bottom-4 left-4 right-4 bg-gray-900 text-white p-4 rounded-lg shadow-lg flex flex-col md:flex-row justify-between items-center gap-4 z-50 hidden">
+  <p class="text-sm max-w-xl">
+    We use cookies to enhance your experience on this site. By clicking "Accept", you consent to our use of cookies.
+  </p>
+  <div class="flex gap-3">
+    <button id="accept-cookies" class="bg-[#39FF14] hover:bg-[#2fff00] text-black px-4 py-2 rounded font-semibold">Accept</button>
+    <button id="reject-cookies" class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded font-semibold">Reject</button>
+  </div>
+</div>
+
+
+  <div class="container mx-auto px-4 py-8">
+
+    <!-- Toggle Dark Mode Button -->
+    <button onclick="toggleDarkMode()" 
+      class="fixed top-4 right-4 px-4 py-2 bg-orange-500 text-white font-semibold rounded-md shadow hover:bg-orange-600 z-50">
+      Toggle Dark Mode
+    </button>
+    
+
+    <!-- Header -->
+    <header class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md text-center mb-8">
+      <h1 class="text-3xl font-bold text-indigo-600 dark:text-yellow-400">Welcome to My Portfolio</h1>
+      <p class="mt-2">Hello, I'm <strong>Tanmay Patil</strong>. Here's my journey, achievements, and aspirations!</p>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="mb-6">
+      <ul class="flex justify-center gap-6 flex-wrap font-semibold text-blue-600 dark:text-blue-400">
+        <li><a href="#welcome" class="hover:text-orange-500">Welcome</a></li>
+        <li><a href="javascript:void(0);" onclick="toggleAbout()" class="hover:text-orange-500">About Me</a></li>
+        <li><a href="#achievements" class="hover:text-orange-500">Achievements</a></li>
+        <li><a href="#goals" class="hover:text-orange-500">Future Goals</a></li>
+        <li><a href="#personal" class="hover:text-orange-500">Personal Side</a></li>
+        <li><a href="#linkedin" class="hover:text-orange-500">LinkedIn</a></li>
+        <li><a href="#contact" class="hover:text-orange-500">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Welcome -->
+    <section id="welcome" class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-md mb-8">
+      <h2 class="text-2xl font-bold text-indigo-500 dark:text-yellow-300 mb-4">Welcome</h2>
+      <video controls class="mx-auto w-full max-w-3xl rounded-md shadow">
+        <source src="motive.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <!-- Daily Logs Section -->
+<section id="daily-logs" class="section py-12 bg-white rounded-lg mb-10 shadow-lg">
+  <h2 class="text-3xl font-semibold text-center mb-6">Daily Learning Logs</h2>
+  <div class="space-y-4 text-lg max-w-3xl mx-auto">
+    <a href=" https://tanmaypatil0001.github.io/tanmayday1/" target="_blank" class="block p-4 bg-gray-100 rounded shadow hover:bg-blue-50 hover:shadow-md transition duration-300">
+      <h3 class="text-xl font-bold text-blue-600">Day 1</h3>
+      <p>Introduction to HTML and basic structure of a web page. Learned tags like <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;body&gt;</code>, and how to add headings and paragraphs.</p>
+    </a>
+    <a href="https://tanmaypatil0001.github.io/tanmaypatil/" target="_blank" class="block p-4 bg-gray-100 rounded shadow hover:bg-blue-50 hover:shadow-md transition duration-300">
+      <h3 class="text-xl font-bold text-blue-600">Day 2</h3>
+      <p>Explored CSS for styling. Understood inline, internal, and external CSS. Practiced applying styles, using classes, and selectors.</p>
+    </a>
+    <a href="https://tanmaypatil0001.github.io/tanmay0001/" target="_blank" class="block p-4 bg-gray-100 rounded shadow hover:bg-blue-50 hover:shadow-md transition duration-300">
+      <h3 class="text-xl font-bold text-blue-600">Day 3</h3>
+      <p>Dived into Flexbox and layout principles. Created responsive layouts using <code>display: flex</code> and various alignment properties.</p>
+    </a>
+    <a href="https://tanmaypatil0001.github.io/tanmayday4/" target="_blank" class="block p-4 bg-gray-100 rounded shadow hover:bg-blue-50 hover:shadow-md transition duration-300">
+      <h3 class="text-xl font-bold text-blue-600">Day 4</h3>
+      <p>Introduced to JavaScript basics: variables, functions, and DOM manipulation. Made buttons interactive.</p>
+    </a>
+    <a href="https://tanmaypatil0001.github.io/tanmayday5/" target="_blank" class="block p-4 bg-gray-100 rounded shadow hover:bg-blue-50 hover:shadow-md transition duration-300">
+      <h3 class="text-xl font-bold text-blue-600">Day 5</h3>
+      <p>Learned how to fetch data using JavaScript. Implemented JSON file reading and displayed achievements dynamically on the webpage.</p>
+    </a>
+  </div>
+</section>
+</div>
+
+    <!-- About Me -->
+    <section id="about" class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-md mb-8">
+      <h2 class="text-2xl font-bold text-indigo-500 dark:text-yellow-300 mb-4">About Me</h2>
+      <div class="flex justify-center mb-4">
+        <img src="SELF.jpeg" alt="Tanmay Patil" class="rounded-full w-48 h-48 object-cover shadow-md">
+      </div>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Name:</strong> Tanmay Patil</li>
+        <li><strong>Location:</strong> Palghar, India</li>
+        <li><strong>Education:</strong> Computer Engineering, St. John College</li>
+        <li><strong>Languages:</strong> C, SQL, Python</li>
+      </ul>
+    </section>
+
+    <!-- Achievements (dynamic from JSON) -->
+    <section id="achievements" class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-md mb-8">
+      <h2 class="text-2xl font-bold text-indigo-500 dark:text-yellow-300 mb-4">Achievements</h2>
+      <ul id="achievements-list" class="list-disc pl-6 space-y-2">
+        <!-- JavaScript will populate this -->
+      </ul>
+    </section>
+
+    <!-- Future Goals -->
+    <section id="goals" class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-md mb-8">
+      <h2 class="text-2xl font-bold text-indigo-500 dark:text-yellow-300 mb-4">Future Goals</h2>
+      <p>I aim to become a skilled Data Engineer who builds efficient, scalable, and secure data pipelines for intelligent decision-making.</p>
+    </section>
+
+    <!-- Personal Side -->
+    <section id="personal" class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-md mb-8">
+      <h2 class="text-2xl font-bold text-indigo-500 dark:text-yellow-300 mb-4">Personal Side</h2>
+      <p><strong>Hobbies:</strong> Reading, Gaming – especially cricket.</p>
+      <p><strong>Role Models:</strong> Steve Jobs, A.P.J. Abdul Kalam</p>
+      <p><strong>Favorite Book:</strong> "Deep Work" by Cal Newport</p>
+      <p><strong>Favorite Sites:</strong> GitHub, Notion</p>
+    </section>
+
+    <!-- LinkedIn -->
+    <section id="linkedin" class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-md mb-8">
+      <h2 class="text-2xl font-bold text-indigo-500 dark:text-yellow-300 mb-4">LinkedIn</h2>
+      <p>Visit my profile:
+        <a href="https://www.linkedin.com/in/tanmay-patil-a67907321" target="_blank" class="text-blue-500 hover:text-orange-500">
+          www.linkedin.com/in/tanmay-patil-a67907321
+        </a>
+      </p>
+    </section>
+
+    <!-- Weather -->
+    <section id="weather" class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow mb-8">
+      <h2 class="text-2xl text-[#1BFFFF] font-bold mb-4">Current Weather in Mumbai</h2>
+      <p id="weather-data" class="text-lg">Loading weather...</p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-md mb-8">
+      <h2 class="text-2xl font-bold text-indigo-500 dark:text-yellow-300 mb-4">Contact</h2>
+      <p>📞 Phone: <a href="tel:+919284048152" class="text-blue-500 hover:text-orange-500">+91 92840 48152</a></p>
+      <p>💬 WhatsApp: <a href="https://wa.me/919284048152" class="text-blue-500 hover:text-orange-500">Chat on WhatsApp</a></p>
+      <p>✉️ Email: <a href="mailto:patiltanmay852@gmail.com" class="text-blue-500 hover:text-orange-500">patiltanmay852@gmail.com</a></p>
+
+      <div class="mt-6">
+        <h3 class="text-xl font-semibold text-indigo-500 dark:text-yellow-300 mb-2">My Location</h3>
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3756.1545023702033!2d72.78093297494425!3d19.706045231892034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be71c92fbd91e67%3A0x2a3ce68676417a45!2sSt.%20John%20College%20of%20Engineering%20and%20Management!5e0!3m2!1sen!2sin!4v1747732838866!5m2!1sen!2sin" 
+          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+    </section>
+
+    <section id="shop" class="py-12 px-6 bg-gray-100 dark:bg-gray-800 text-center">
+        <h2 class="text-3xl font-bold mb-4">🛍️ My Shop</h2>
+        <p class="text-gray-700 dark:text-gray-300 mb-6 max-w-xl mx-auto">
+          Explore my custom-designed online store featuring trendy and comfortable apparel. Built with TailwindCSS and JavaScript, it's a sleek and responsive shopping experience!
+        </p>
+        <a href="shop.html" target="_blank" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition">
+          Visit Tanmay  Store
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 bg-gray-100 dark:bg-gray-800 rounded-lg">
+      <p class="text-sm">📧 Contact: 
+        <a href="mailto:patiltanmay852@gmail.com" class="text-blue-500 hover:text-orange-500">
+          patiltanmay852@gmail.com
+        </a>
+      </p>
+    </footer>
+
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function toggleDarkMode() {
+      document.documentElement.classList.toggle('dark');
+    }
+
+    function toggleAbout() {
+      const about = document.getElementById('about');
+      about.style.display = (about.style.display === 'none') ? 'block' : 'none';
+    }
+
+    // Fetch Achievements from JSON file
+    fetch('data.json')
+      .then(response => response.json())
+      .then(data => {
+        const list = document.getElementById('achievements-list');
+        data.achievements.forEach(item => {
+          const li = document.createElement('li');
+          li.textContent = item;
+          list.appendChild(li);
+        });
+      })
+      .catch(error => console.error('Error loading achievements:', error));
+
+    // Fetch Weather Data
+    async function fetchWeather() {
+      const weatherElement = document.getElementById("weather-data");
+      const weatherCodes = {
+        0: "Clear sky", 1: "Mainly clear", 2: "Partly cloudy", 3: "Overcast",
+        45: "Fog", 48: "Depositing rime fog", 51: "Light drizzle", 53: "Moderate drizzle",
+        55: "Dense drizzle", 56: "Freezing light drizzle", 57: "Freezing dense drizzle",
+        61: "Slight rain", 63: "Moderate rain", 65: "Heavy rain", 66: "Freezing light rain",
+        67: "Freezing heavy rain", 71: "Slight snow fall", 73: "Moderate snow fall",
+        75: "Heavy snow fall", 77: "Snow grains", 80: "Slight rain showers",
+        81: "Moderate rain showers", 82: "Violent rain showers", 85: "Slight snow showers",
+        86: "Heavy snow showers", 95: "Thunderstorm", 96: "Thunderstorm with slight hail",
+        99: "Thunderstorm with heavy hail"
+      };
+
+      try {
+        const response = await fetch("https://api.open-meteo.com/v1/forecast?latitude=19.0760&longitude=72.8777&current_weather=true");
+        const data = await response.json();
+        const temp = data.current_weather.temperature;
+        const code = data.current_weather.weathercode;
+        const condition = weatherCodes[code] || "Unknown";
+        weatherElement.textContent = `🌡️ ${temp}°C | 🌤️ Weather: ${condition}`;
+      } catch (error) {
+        weatherElement.textContent = "Unable to load weather data.";
+        console.error("Weather fetch error:", error);
+      }
+    }
+    
+
+    fetchWeather();
+  </script>
+
+</body>
+</html>

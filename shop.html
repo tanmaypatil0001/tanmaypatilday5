@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop - Trendy Tees</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md p-4 flex justify-between items-center">
+    <div class="text-2xl font-bold">🧢 Trendy Tees</div>
+    <div class="space-x-6 hidden md:flex">
+      <a href="#" class="hover:text-blue-500">Home</a>
+      <a href="#products" class="hover:text-blue-500">Products</a>
+      <button onclick="toggleCart()" class="hover:text-blue-500">Cart 🛒 (<span id="cart-count">0</span>)</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="bg-blue-200 text-center py-10">
+    <h1 class="text-4xl font-bold">Trendy Tees for Everyone</h1>
+    <p class="mt-2 text-lg">Fresh looks. Great prices.</p>
+  </header>
+
+  <!-- Filter Section -->
+  <section class="p-6">
+    <label for="price-filter" class="mr-4">Filter by Price:</label>
+    <select id="price-filter" class="border p-2">
+      <option value="all">All</option>
+      <option value="0-500">₹0 - ₹500</option>
+      <option value="500-1000">₹500 - ₹1000</option>
+      <option value="1000+">₹1000+</option>
+    </select>
+  </section>
+
+  <!-- Product Listing -->
+  <section id="products" class="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <!-- Products will be rendered here -->
+  </section>
+
+  <!-- Cart Sidebar -->
+  <div id="cart" class="fixed top-0 right-0 w-80 h-full bg-white shadow-lg p-6 hidden flex-col z-50 overflow-y-auto">
+    <h2 class="text-xl font-bold mb-4">Your Cart</h2>
+    <div id="cart-items" class="space-y-4"></div>
+
+    <!-- ... inside your cart sidebar div, above the total and checkout ... -->
+
+<!-- Delivery Option -->
+<div class="mt-4">
+  <label for="delivery-option" class="block font-medium mb-1">Delivery Option:</label>
+  <select id="delivery-option" class="border p-2 w-full">
+    <option value="standard">Standard Delivery (3–5 days)</option>
+    <option value="express">VIP Delivery (1–2 days)</option>
+  </select>
+</div>
+
+<!-- Payment Method -->
+<div class="mt-4">
+  <label for="payment-method" class="block font-medium mb-1">Payment Method:</label>
+  <select id="payment-method" class="border p-2 w-full">
+    <option value="cod">Cash on Delivery</option>
+    <option value="upi">UPI</option>
+    <option value="card">Credit/Debit Card</option>
+  </select>
+</div>
+
+<!-- UPI Scanner QR Code -->
+<div id="upi-scanner" class="mt-4 hidden">
+  <label class="block font-medium mb-1">Scan to Pay:</label>
+  <img src="scan.jpeg" alt="UPI QR Code" class="w-48 h-48 object-contain border mx-auto">
+</div>
+
+<!-- Address Input -->
+<div class="mt-4">
+  <label for="address" class="block font-medium mb-1">Delivery Address:</label>
+  <textarea id="address" class="border p-2 w-full" rows="3" placeholder="Enter your full address..."></textarea>
+</div>
+
+<!-- Email Input -->
+<div class="mt-4">
+  <label for="email" class="block font-medium mb-1">Email Address:</label>
+  <input type="email" id="email" class="border p-2 w-full" placeholder="you@example.com" />
+</div>
+
+<!-- Mobile Input -->
+<div class="mt-4">
+  <label for="mobile" class="block font-medium mb-1">Phone Number:</label>
+  <input type="tel" id="mobile" class="border p-2 w-full" placeholder="123-456-7890" />
+</div>
+
+<!-- Total and Checkout -->
+<div class="mt-4">
+  <p class="text-lg">Total: ₹<span id="cart-total">0</span></p>
+  <button onclick="handleCheckout()" class="mt-4 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Checkout</button>
+</div>
+
+
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center p-4 mt-10">
+    <p>&copy; 2025 Trendy Tees | <a href="#" class="underline">About</a> | <a href="#" class="underline">Contact</a> | <a href="#" class="underline">Terms</a></p>
+  </footer>
+
+  <!-- External Script -->
+  <script src="script.js"></script>
+</body>
+</html>
